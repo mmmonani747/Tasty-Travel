@@ -1,7 +1,113 @@
-.u-section-1 .u-sheet-1 {
-  min-height: 400px;
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.u-section-1 .u-btn-1 {
-  margin: 324px auto 31px;
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles to stay at the top */
+.navbar {
+  background-color: #f1c40f;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Main container to take full height without affecting navbar */
+.auth-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures the container takes full view height */
+  background: linear-gradient(to right, #a3a49b, #a3a49b);
+  padding-top: 60px; /* Adjusting for the fixed navbar */
+  box-sizing: border-box;
+}
+
+/* Styling the login/signup form */
+.auth-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f39c12;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #e67e22;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-switch a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
