@@ -1,24 +1,16 @@
-const { MongoClient } = require('mongodb');
-
-const uri = "mongodb://localhost:27017"; // Replace with your MongoDB connection string
-
-const fetchDataAndPrint = async () => {
-  try {
-    const client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    const db = client.db("hotelsDB"); // Replace with your database name
-    const collection = db.collection("hotels"); // Replace with your collection name
-
-    // Fetch data from the collection
-    const data = await collection.find().toArray();
-
-    // Print the fetched data to the console
-    console.log(data);
-
-    // Close the connection when done
-    client.close();
-  } catch (err) {
-    console.error("Error fetching data:", err);
-  }
-};
-
-fetchDataAndPrint();
+const mongoose = require('mongoose');
+const mongoURI = 'mongodb+srv://user1:user1@cluster0.lymbh.mongodb.net/'
+const mongoDB =async() =>{
+await mongoose.connect(mongoURI, { useNewUrlParser: true }, async(err, result)=>{
+if(err) console.log("---", err)
+else{
+console.log("connected");
+const fetched_data = await mongoose.connection.db.collection("food_items");
+fetched_data.find({}).toArray(function(err, data){
+if(err) console.log(err);
+else{
+console.log()
+}
+})
+}
+});}
