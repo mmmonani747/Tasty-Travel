@@ -41,7 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Ensures the container takes full view height */
-  background: linear-gradient(to right, #a3a49b, #a3a49b);
+  background: #ffffff;
   padding-top: 60px; /* Adjusting for the fixed navbar */
   box-sizing: border-box;
 }
