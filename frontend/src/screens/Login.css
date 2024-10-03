@@ -1,0 +1,63 @@
+.auth-page-container {
+    padding: 20px;
+  }
+  
+  .auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #478ac9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3777a5;
+  }
+  
+  .auth-switch {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .auth-switch p {
+    font-size: 14px;
+  }
+  
+  .auth-switch a {
+    color: #478ac9;
+    text-decoration: none;
+  }
+  
+  .u-logo-image {
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* Add more styles here as needed */
+  
