@@ -1,0 +1,190 @@
+/* General Styling */
+.checkout-container {
+  padding: 20px;
+  width: 95%;
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.checkout-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #070a0d;
+  background-color: #ffc107;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Bill Summary Section */
+.bill-total-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.bill-total-section h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #070a0d;
+  margin-bottom: 15px;
+}
+
+.order-total {
+  font-size: 1rem;
+  color: #333;
+}
+
+.order-total strong {
+  color: #28a745;
+}
+
+/* Address Section */
+.address-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.address-section h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #070a0d;
+  margin-bottom: 10px;
+}
+
+.address-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  resize: vertical;
+}
+
+/* Payment Method Section */
+.payment-method-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.payment-method-section h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #070a0d;
+  margin-bottom: 10px;
+}
+
+.payment-options label {
+  font-size: 1.1rem;
+}
+
+/* Card Details Section */
+.card-details-section {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-details-section h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #070a0d;
+  margin-bottom: 10px;
+}
+
+.card-detail-inputs label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+}
+
+.card-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+.expiry-date-selectors {
+  display: flex;
+  gap: 10px;
+}
+
+.expiry-selector {
+  width: 49%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Confirm Order Button */
+.confirm-order-btn {
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.confirm-order-btn:hover {
+  background-color: #218838;
+}
+
+/* Adjust footer to bottom */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .checkout-title {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .bill-total-section,
+  .address-section,
+  .payment-method-section,
+  .card-details-section {
+    padding: 15px;
+  }
+
+  .confirm-order-btn {
+    font-size: 1rem;
+  }
+}

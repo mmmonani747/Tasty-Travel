@@ -1,0 +1,43 @@
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+  }
+  
+  .restaurant-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px; /* Card width */
+    text-align: center;
+  }
+  
+  .restaurant-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  /* RestaurantList.css */
+.restaurant-list-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+.restaurant-grid > div {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.restaurant-grid > div:hover {
+  transform: scale(1.05); /* Adds hover effect to cards */
+}

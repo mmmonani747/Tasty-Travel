@@ -1,0 +1,285 @@
+/* General Container for the entire Order Now section */
+.order-now-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for the overall container */
+}
+
+/* Title styling */
+.order-now-title {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase; /* Capitalize the title */
+}
+
+/* Align items in the Order Now grid */
+.order-now-items .col-md-4 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px; /* Add space between cards */
+}
+
+/* Card styling */
+.order-now-card {
+  width: 100%;
+  max-width: 360px;  /* Increased the max-width to make the card broader */
+  height: 280px;     /* You can adjust the height as needed, but keeping it balanced */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Keeps the content evenly distributed */
+  padding: 15px;
+  overflow: hidden; /* Ensures the content doesn't overflow */
+}
+
+/* Hover effect for the card */
+.order-now-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+}
+
+/* Button styling inside the card */
+.order-now-button {
+  font-size: 1rem;
+  padding: 8px 16px;
+  background-color: #ffc107;
+  border: none;
+  color: #070a0d;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase; /* Make button text uppercase */
+}
+
+.order-now-button:hover {
+  background-color: #e6a700;
+  transform: scale(1.05);
+}
+
+/* Styling for the total price container */
+.order-now-total-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for the total price text */
+.order-now-total {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #070a0d;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Capitalize total price label */
+}
+
+/* Checkout button styling */
+.checkout-button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+/* Hover effect for checkout button */
+.checkout-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Cart Icon - Position it at top-left below the navbar */
+.cart-icon {
+  position: fixed;
+  top: 70px; /* Adjust based on the height of your navbar */
+  right: 20px;  /* Move it to the right side */
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: #ffc107;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1050;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Cart item count */
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ffc107;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+/* Offcanvas */
+.offcanvas {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px;  /* Initially hide offcanvas to the right */
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1045;
+  border-left: 3px solid #ffc107; /* Add a border to the left of the offcanvas */
+}
+
+.offcanvas.show {
+  transform: translateX(-300px);  /* Bring the offcanvas into view when active */
+}
+
+/* Offcanvas Header */
+.offcanvas-header {
+  background-color: #ffc107;
+  color: white;
+  padding: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase; /* Capitalize title */
+}
+
+/* Offcanvas Body */
+.offcanvas-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 60px);  /* Ensures content fits */
+}
+
+/* Cart Item in Offcanvas */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item p {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-size: 1rem;
+  text-transform: capitalize; /* Capitalize cart item text */
+}
+
+/* Styling the quantity buttons */
+.cart-item button {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 10px; /* Adjust the size for buttons */
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cart-item button:hover {
+  background-color: #e6a700;
+  transform: scale(1.1);
+}
+
+.cart-item button:focus {
+  outline: none;
+}
+
+.cart-item button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Remove button styling */
+.cart-item button.remove-btn {
+  background-color: #dc3545;
+}
+
+.cart-item button.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Buttons at the bottom of the offcanvas */
+.offcanvas-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f1f1f1;
+}
+
+.offcanvas-footer button {
+  width: 48%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.offcanvas-footer .close-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.offcanvas-footer .close-btn:hover {
+  background-color: #c82333;
+}
+
+.offcanvas-footer .checkout-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.offcanvas-footer .checkout-btn:hover {
+  background-color: #218838;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .cart-item button {
+      font-size: 0.9rem;
+      padding: 4px 8px;
+  }
+
+  .offcanvas {
+      width: 250px;
+  }
+
+  .offcanvas-header {
+      font-size: 1.3rem;
+  }
+
+  .offcanvas-footer button {
+      font-size: 1rem;
+      padding: 8px;
+  }
+
+  .order-now-card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.cart-icon.hidden {
+  display: none;
+}

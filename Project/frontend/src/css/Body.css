@@ -1,0 +1,137 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.hero-section.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.text-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.contact-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Restaurant Section Styles */
+.restaurants-section {
+  padding: 3rem 1rem;
+  background-color: #fdd835;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.restaurant-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(0.5); /* Initial zoomed-out state */
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.restaurant-card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.restaurant-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #90caf9;
+  color: #fff;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+
+/* Animation for Restaurants Section */
+.restaurants-section-animate .restaurant-card {
+  transform: scale(1); /* Full size */
+  opacity: 1;
+}
+
