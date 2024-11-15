@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Main login page container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px; /* Adjust to account for fixed navbar */
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Login container styling */
+.login-container {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+}
+
+/* Slide-in animation when the class is applied */
+.login-container.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Login form title */
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f39c12;
+}
+
+/* Input fields */
+.input-field {
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+.login-btn {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Sign-up prompt styling */
+.signup-prompt {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.signup-link {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in and slide-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ReCAPTCHA styling */
+.recaptcha-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%;
+    padding: 2rem;
+  }
+}

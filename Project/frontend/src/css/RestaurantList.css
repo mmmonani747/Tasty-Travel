@@ -1,0 +1,201 @@
+/* Card container to align in a grid with gaps */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  padding: 20px;
+  background-color: #fffbe6; /* Light yellow background */
+}
+
+/* Styling each card */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #ffc107; /* Yellow border to match theme */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-top: 30px; /* Increased top margin */
+  margin-bottom: 30px; /* Increased bottom margin */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Restaurant name styling (always yellow background) */
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffc107; /* Always yellow background */
+  color: white; /* Text color remains white */
+}
+
+/* Cuisine, rating, and city styling */
+.card h4, .card h6 {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* On hover change text color to orange for details */
+.card h4:hover, .card h6:hover {
+  color: #ffa500; /* Orange color on hover */
+}
+
+/* Button group to align buttons horizontally */
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+/* Order Now button */
+.order-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #0056b3;
+}
+
+/* Book Table button */
+.book-button {
+  background-color: #ffc107;
+  color: #333;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .restaurant-grid {
+      grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+/* Pagination controls */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.pagination button {
+  background-color: #007bff; /* Blue color for the buttons */
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination button:not(:disabled):hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Span styling for pagination text */
+.pagination span {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Search bar container */
+.search-bar-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-bar-container input {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+  position: relative;
+  width: 60%;  /* Make the search bar larger */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Search Input Field */
+.search-input {
+  width: 100%;
+  padding: 12px;  /* Increase padding for a larger input field */
+  font-size: 1.2rem;  /* Larger font size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Change the border color when the input is focused */
+.search-input:focus {
+  border-color: #ffc107;
+}
+
+/* Search Button */
+.search-button {
+  background-color: transparent;  /* Remove background color */
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1px;  /* To ensure the button is adjacent to the input */
+}
+
+/* Search Icon */
+.search-icon {
+  color: #333;  /* Set the icon color */
+  font-size: 1.5rem;  /* Increase icon size */
+}
+
+.search-button:hover .search-icon {
+  color: #ffc107;  /* Change icon color on hover */
+}
